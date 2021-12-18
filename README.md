@@ -2,9 +2,9 @@
 Source code of the realized project (Android Application) in the 'Junction X Algiers' hackathon.
 
 ## Our Team (Discord IDs): 
-1- Anis Nacef#7493
-2- Khaoula Merhab#2141
-3- Monsef Noubadji#7553
+1- Anis Nacef#7493<br>
+2- Khaoula Merhab#2141<br> 
+3- Monsef Noubadji#7553<br>
 4- Aicha#5540
 
 ## Prototype :
