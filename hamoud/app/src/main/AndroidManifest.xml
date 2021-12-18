@@ -34,7 +34,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDI3itQpr8Z4Oh-PQt3ZBx_2rdQfa1YtzM" />
+<!--             android:value="AIzaSyDI3itQpr8Z4Oh-PQt3ZBx_2rdQfa1YtzM" /> --> // comment this out
 
         <activity
             android:name=".publicDashboard"
