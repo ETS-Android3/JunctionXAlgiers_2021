@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sendFeedBack">
+
+    <!-- This is the ProgressBar Part -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/partthree"
+        android:visibility="gone"
+        android:background="@drawable/blue_fill__rounded_color"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:outlineAmbientShadowColor="@color/colorBGshape"
+            >
+            <ProgressBar
+                android:id="@+id/pBar"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                >
+
+
+            </ProgressBar>
+            <TextView
+                android:id="@+id/textPB"
+                android:layout_gravity="bottom|center"
+                android:layout_marginBottom="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Uploading and Sending Tasks ....."
+                android:textColor="@color/blueforce"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@+id/pBar"
+                />
+        </androidx.cardview.widget.CardView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <!-- This is the Second part -->
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/parttwo"
+        android:visibility="gone"
+        >
+        <View
+            android:background="@drawable/bgshape"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp"/>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chose The Workers"
+                android:textColor="@color/colorTextHeader"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.045" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec"
+                android:layout_marginTop="125dp"
+                android:layout_marginBottom="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:layout_constraintVertical_bias="0.48000002" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/btnSend"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom|center"
+            android:background="@drawable/blue_fill__rounded_color"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="Send            >"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:onClick="btnSendPress"
+            />
+
+
+
+
+
+
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+    <!-- This is the first part -->
+
+
+    <ScrollView
+        android:id="@+id/partone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"><!---->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/blue_bg">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/blue_bg">
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintVertical_bias="0.1"
+                android:id="@+id/title_container"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="@drawable/blue_border_rounded_cornwe">
+                <!-- INPUT -->
+                <EditText
+                    android:id="@+id/edttitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/username_icon"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Name"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:paddingLeft="17dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:textSize="12sp" />
+                <!-- ICON -->
+                <ImageView
+                    android:id="@+id/username_icon"
+                    android:layout_width="14.7dp"
+                    android:layout_height="10.3dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:src="@drawable/email" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/message_container"
+                app:layout_constraintVertical_bias="0.1"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintTop_toBottomOf="@id/title_container"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="@drawable/blue_border_rounded_cornwe">
+                <!-- INPUT -->
+                <EditText
+                    android:id="@+id/edtmessage"
+                    android:layout_width="240dp"
+                    android:layout_height="450dp"
+                    android:layout_toRightOf="@+id/icon"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="FeedBack"
+                    android:inputType="textMultiLine"
+                    android:paddingLeft="17dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:textSize="12sp" />
+                <!-- ICON -->
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="14.7dp"
+                    android:layout_height="10.3dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="17dp"
+                    android:src="@drawable/password" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/recordFrame"
+                app:layout_constraintTop_toBottomOf="@+id/title_container"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintVertical_bias="0.15"
+                app:layout_constraintHorizontal_bias="0.96"
+                >
+
+                <ImageButton
+                    android:id="@+id/recorder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:onClick="btnRecordPress"
+                    android:src="@drawable/recordicon" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/pauseFrame"
+                app:layout_constraintTop_toBottomOf="@+id/title_container"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintVertical_bias="0.3"
+                app:layout_constraintHorizontal_bias="0.96"
+                >
+
+                <ImageButton
+                    android:id="@+id/pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:onClick="btnPausePress"
+                    android:src="@drawable/pauseicon" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/playFrame"
+                app:layout_constraintTop_toBottomOf="@+id/title_container"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintVertical_bias="0.45"
+                app:layout_constraintHorizontal_bias="0.96"
+                >
+
+                <ImageButton
+                    android:id="@+id/play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:onClick="btnPlayPress"
+                    android:src="@drawable/pauseicon" />
+
+            </RelativeLayout>
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/title_container"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                app:layout_constraintVertical_bias="0"
+
+                android:background="@drawable/blue_fill__rounded_color"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="Product FeedBack Page"
+                android:textColor="#ffffff"
+                android:textSize="29sp"
+                />
+            <TextView
+                app:layout_constraintTop_toBottomOf="@+id/message_container"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintHorizontal_bias="0.1"
+                android:id="@+id/next"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+
+                android:background="@drawable/blue_fill__rounded_color"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center"
+                android:paddingTop="14dp"
+                android:paddingBottom="14dp"
+                android:text="Send FeedBack            >"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:onClick="btnNextPress"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".dashboard"
+android:background="@color/colorBackground"
+android:orientation="vertical">
+
+<View
+    android:id="@+id/view"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@drawable/background"
+    />
+<LinearLayout
+    android:layout_margin="25dp"
+    android:layout_marginTop="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="60dp"
+      android:background="@drawable/profilebar"
+      android:layout_marginLeft="20dp"
+      android:layout_marginTop="15dp"
+      >
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:gravity="center|center_vertical"
+        android:text="Products Page"
+        android:textColor="@color/colorText"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.384" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.886"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/person"
+        android:background="@drawable/imageback"/>
+
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+  <RelativeLayout
+
+      android:layout_marginTop="150dp"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/rec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+  </RelativeLayout>
+
+
+
+
+
+</androidx.core.widget.NestedScrollView>
+
+
+<com.google.android.material.bottomappbar.BottomAppBar
+    android:id="@+id/bottomappbar"
+    android:layout_width="match_parent"
+    android:layout_gravity="bottom"
+    android:layout_height="50dp"
+    app:backgroundTint="@color/blueforce"
+
+    />
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/newicon"
+    android:src="@drawable/ic_outline_add_circle_24"
+    app:backgroundTint="@color/colorBGshape"
+    app:layout_anchor="@+id/bottomappbar"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

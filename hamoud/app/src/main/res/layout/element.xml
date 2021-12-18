@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_columnWeight="1"
+    android:layout_rowWeight="1"
+    android:elevation="5dp"
+    app:cardCornerRadius="11dp"
+    android:layout_margin="11dp"
+    >
+    <LinearLayout
+        android:background="#242021"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/myimage"
+            android:layout_width="400dp"
+            android:layout_height="200dp"/>
+        <TextView
+            android:text="Task Name"
+            android:textColor="@color/yellowOne"
+            android:textStyle="bold"
+
+            android:textSize="20sp"
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp">
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/arup"
+                />
+            <TextView
+                android:id="@+id/timeText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:text="10"
+                android:textColor="@color/yellowOne"
+                android:textSize="10sp"
+                android:gravity="center"/>
+            <ImageButton
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/ardown"
+
+                />
+            <TextView
+                android:id="@+id/timeText2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="15dp"
+                android:text="10"
+                android:textColor="@color/yellowOne"
+                android:textSize="10sp"
+                android:gravity="center"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                android:layout_marginRight="20dp">
+                <ImageButton
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/feedback"
+                    android:background="?android:attr/selectableItemBackground"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

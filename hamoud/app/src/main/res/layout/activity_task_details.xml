@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText"
+    tools:context=".TaskDetails">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/bgshape" />
+
+    <!-- post layout -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:text="Task Details"
+        android:textColor="@color/colorTextHeader"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+
+        android:id="@+id/layoutOne"
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+
+            tools:ignore="UselessParent">
+
+            <!-- background post  -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/bg_recat">
+
+                <TextView
+
+                    android:id="@+id/titleee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLines="3"
+                    android:text="Ro7e jibli al9ahwa 3a 3:00am"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="16sp"
+                    tools:ignore="RtlHardcoded" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- post Date -->
+    <RelativeLayout
+        android:id="@+id/titledes"
+        android:layout_marginTop="70dp"
+        android:layout_width="154dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_rectangle"
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:gravity="center"
+            android:text="Tiltle"
+            android:textColor="@color/textthird" />
+
+    </RelativeLayout>
+
+    <!-- post layout ++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutThree"
+        android:layout_toEndOf="@+id/layoutTwo"
+        android:layout_below="@+id/layoutOne"
+        android:layout_marginTop="29dp">
+
+        <ImageButton
+            android:id="@+id/audiooo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/audioicon2" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="158dp"
+        android:layout_below="@+id/layoutOne"
+        android:id="@+id/layoutTwo"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+
+            tools:ignore="UselessParent">
+
+            <!-- background post  -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/bg_recat">
+
+                <TextView
+                    android:id="@+id/messageee"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center|left"
+                    android:text="From error to error, one discovers the entire truth.” “From error to error, one discovers the entire truth.” Sigmund Freud."
+                    android:textColor="@color/textPrimary"
+                    android:textSize="16sp"
+                    tools:ignore="RtlHardcoded" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- post Date -->
+    <RelativeLayout
+        android:layout_below="@+id/layoutOne"
+        android:layout_width="154dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_rectangle"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:gravity="center"
+            android:text="The Message"
+            android:textColor="@color/textthird" />
+
+    </RelativeLayout>
+
+    <!-- post Date -->
+    <RelativeLayout
+        android:layout_below="@+id/layoutTwo"
+        android:layout_width="154dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/workT"
+        android:background="@drawable/bg_rectangle"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Workers List"
+            android:textColor="@color/textthird" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:layout_below="@+id/workT"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_recat" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@+id/rec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:backgroundTint="@color/colorBackgroundshape"
+        android:elevation="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="29-04-2000"
+                    android:textColor="@color/black"
+
+                    android:layout_gravity="center"
+                    android:textSize="15sp"
+                    android:id="@+id/dateee"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_marginEnd="30dp"
+                        android:layout_gravity="center"
+                        android:text="04:00"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:id="@+id/timeee"
+                        android:layout_marginRight="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

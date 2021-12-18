@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hamoudApp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="Hamoud App"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Papero"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".RequestsPage"
+            android:exported="true" />
+        <activity
+            android:name=".PlacingOrder"
+            android:exported="true" />
+        <activity
+            android:name=".loginTwo"
+            android:exported="true" />
+        <activity
+            android:name=".loginOne"
+            android:exported="true" />
+        <activity
+            android:name=".sendFeedBack"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDI3itQpr8Z4Oh-PQt3ZBx_2rdQfa1YtzM" />
+
+        <activity
+            android:name=".publicDashboard"
+            android:exported="true" />
+        <activity
+            android:name=".theMain"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".newTask"
+            android:exported="true" />
+        <activity
+            android:name=".TaskDetails"
+            android:exported="true" />
+        <activity
+            android:name=".allTasks"
+            android:exported="true" />
+        <activity
+            android:name=".doneTasks"
+            android:exported="true" />
+        <activity
+            android:name=".dashboard"
+            android:exported="true" />
+        <activity
+            android:name=".WaitingTasks"
+            android:exported="true" />
+        <activity
+            android:name=".profilePage"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>
